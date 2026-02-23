@@ -12,9 +12,12 @@ public class UI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI WaveCountText;
     [Space]
     [SerializeField] private GameObject WaveUI;
+    [SerializeField] private CanvasGroup WaveUICanvasGroup;
     [SerializeField] private GameObject GameOverUI;
     [SerializeField] private GameObject PauseUI;
     [SerializeField] private GameObject ControlsUI;
+
+    [Header("Flags")]
 
     private RectTransform controlsRT;
     private Vector3 originalControlsPos;
@@ -34,7 +37,7 @@ public class UI : MonoBehaviour
 
     private bool isGamePaused = false;
     private bool isGameOver = false;
-    private bool isUIVisible = false;
+    public bool isUIVisible = false;
     [HideInInspector] public bool isControlsShown = false;
 
     private void Awake()
@@ -183,6 +186,7 @@ public class UI : MonoBehaviour
     {
         PauseUI.SetActive(enable);
         SetIsUIVisible(enable);
+        WaveUICanvasGroup.alpha = enable ? 0.0f : 1.0f;
     }
 
     public void AnnounceWave(int waveNumber)

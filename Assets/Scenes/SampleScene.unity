@@ -383,6 +383,7 @@ MonoBehaviour:
   KillCountText: {fileID: 1304224479}
   WaveCountText: {fileID: 24295795}
   WaveUI: {fileID: 303117417}
+  WaveUICanvasGroup: {fileID: 303117420}
   GameOverUI: {fileID: 1740194135}
   PauseUI: {fileID: 1715141382}
   ControlsUI: {fileID: 1462218868}
@@ -1413,6 +1414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303117418}
   - component: {fileID: 303117419}
+  - component: {fileID: 303117420}
   m_Layer: 5
   m_Name: Wave_UI
   m_TagString: Untagged
@@ -1461,6 +1463,18 @@ MonoBehaviour:
   outTime: 1
   outDelay: 2
   CloseAutomatically: 1
+--- !u!225 &303117420
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303117417}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &338490140
 GameObject:
   m_ObjectHideFlags: 0

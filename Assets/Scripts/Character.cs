@@ -194,7 +194,7 @@ public class Character : MonoBehaviour
 
     protected virtual void TryToAttack(InputAction.CallbackContext context)
     {
-        if (isGrounded && canAttack)
+        if (isGrounded && canAttack && !UI.instance.isUIVisible)
         {
             Animator.SetTrigger("Attack");
         }
